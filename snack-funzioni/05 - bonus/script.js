@@ -10,9 +10,32 @@ const name = 'Mario';
 
 // Dichiara la funzione qui.
 
+function saluto(userName){
+  let typeOfGreet;
+
+  
+  const now = new Date()
+  const hour = now.getHours();
+  
+  if(parseInt(hour) < 13){
+    typeOfGreet = 'Buongiorno';
+  } else if (hour < 17){
+    typeOfGreet = 'Buon pomeriggio';
+  } else {
+    typeOfGreet = 'Buonasera';
+  }
+
+  let salutoCompleto = `${typeOfGreet} ${userName}`;
+  
+  return salutoCompleto
+
+}
+
+
+  
 
 // Invoca la funzione qui e stampa il risultato in console
 
-
+console.log(saluto(name));
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
