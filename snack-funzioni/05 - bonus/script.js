@@ -17,7 +17,7 @@ function saluto(userName){
   const now = new Date()
   const hour = now.getHours();
   
-  if(parseInt(hour) < 13){
+  if(hour < 13){
     typeOfGreet = 'Buongiorno';
   } else if (hour < 17){
     typeOfGreet = 'Buon pomeriggio';
